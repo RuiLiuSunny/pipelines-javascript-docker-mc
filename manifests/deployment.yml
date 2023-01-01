@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ruiliusunnypipelinesjavascriptdockermc 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ruiliusunnypipelinesjavascriptdockermc
+  template:
+    metadata:
+      labels:
+        app: ruiliusunnypipelinesjavascriptdockermc 
+    spec:
+      containers:
+        - name: ruiliusunnypipelinesjavascriptdockermc 
+          image: ruitest.azurecr.io/ruiliusunnypipelinesjavascriptdockermc
+          ports:
+          - containerPort: 8080
